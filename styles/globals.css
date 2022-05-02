@@ -1,16 +1,237 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+* {box-sizing: border-box;}
+@media only screen and (max-width: 575px){
+    .baner-text{
+        font-size:8vw !important;
+    }
+    .nav-item>a{
+        font-size: 0.5em;
+    }
+    .parallax{
+        height: 150px !important;
+    }
+}
+@media only screen and (max-width:1000px){
+    .baner-text{
+        font-size: 9vw !important;
+    }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-* {
-  box-sizing: border-box;
+
+/**GENERAL STYLES**/
+html {
+    scroll-behavior: smooth;
 }
+.parent-relative{
+    position: relative;
+}
+.align-center{
+    text-align: center;
+}
+/* ----------------- */
+
+/*NAVIGATION STYLE*/
+.navbar{
+    background-color:#274172;
+}
+.nav-item>a{
+    color:white;
+    font-size: 1.2em;
+    font-family: 'Anton', sans-serif;
+}
+.nav-item>a:hover{
+    color:#c48d28;
+}
+.dropdown-menu{
+    background-color: #274172 !important;
+}
+.dropdown-item{
+    color:white !important;
+    font-size: 1em;
+    font-family: 'Anton', sans-serif;
+}
+.dropdown-item:hover{
+    background-color: transparent !important;
+    color: #c48d28 !important;
+}
+.active{
+    border-bottom: 2px solid white;
+}
+/* ------- */
+
+
+
+/**BANNER STYLES**/
+.baner-text{
+    position: absolute;
+    bottom:40%;
+    right:5%;
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+    font-size: 8em;
+    font-family: "Sacramento", cursive;
+    text-align: center;
+    animation: blink 4s infinite;
+}
+.parallax{
+    background-image: url('../public/images/banner-retro-furniture.jpg');
+    height:600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wide-bg{
+    background-image: url('../public/images/wood-background.jpg');
+    background-size: cover;
+    padding: 5%;
+}
+.summary{
+    background-color:white;
+    box-shadow: 5px 10px 8px #000000;
+    padding:2%;
+}
+h1{
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    color:black;
+}
+p{
+    font-family: 'Rajdhani',sans-serif;
+    font-weight: bold;
+}
+.white-heading{
+    color:white !important;
+}
+.featured-buttons-bg{
+    background-color: #274172;
+    padding:6%;
+    background-size: cover;
+}
+.section-over-banner{
+    background-color: #274172;
+    position: absolute;
+    bottom:14%;
+    left:22%;
+    padding: 2%;
+}
+.text-over-banner{
+    font-family: 'Rajdhani';
+    color:white;
+    font-size: 1.4vw;
+}
+.homepage-row{
+    display: flex;
+    align-items: center;
+}
+.homepage-info-section{
+    padding:3%;
+    font-family: 'Rajdhani';
+    font-size: 1.3vw;
+    background-color: #274172;
+    color:white;
+}
+.offer-info-section{
+    font-family: 'Rajdhani';
+    background-color: #274172;
+    color:white;
+}
+/* ------------ */
+
+/**BUTTONS**/
+.quick-access-box{
+    padding:5%;
+    background-image: url('../public/images/golden-btn.jpg');
+    box-shadow: 5px 10px 8px #000000;
+    transition:1s;
+    background-size: cover;
+}
+.quick-access-box>h1{
+    font-family: 'Saira Extra Condensed', sans-serif !important;
+    transition: 1s;
+    color: white !important;
+    text-shadow: 2px 2px #000000;;
+}
+.quick-access-box:hover{
+    cursor:pointer;
+}
+.quick-access-box:hover>h1{
+    transform: scale(1.2);
+}
+.homepage-info-button{
+    border: 1px solid #ffd700;
+    background-color: transparent;
+    font-size: 1.5em;
+    color:#ffd700;
+    padding:5%;
+    border-radius: 0%;
+}
+.homepage-info-button:hover{
+    background-color: #ffd700;
+    color:#000000;
+    transition: 0.8s ease-out;
+}
+.offer-info-button{
+    border: 1px solid #ffd700;
+    background-color: transparent;
+    color:#ffd700;
+    border-radius: 0%;
+    padding:1%;
+    text-decoration: none;
+}
+.offer-info-button:hover{
+    background-color: #ffd700;
+    color:#000000;
+    transition: 0.8s ease-out;
+}
+/* ----------------- */
+
+/*LOGO*/
+.logo{
+    max-height: 28vh;
+    max-width: 28vw;
+    margin-bottom: 5%;
+}
+.footer-logo{
+    max-width: 30vw;
+    max-height: 30vh;
+}
+#logo-section::before,
+#logo-section::after {
+    display: inline-block;
+    content: "";
+    border-top: .2rem solid #ffd700;
+    width: 10rem;
+    margin: 0 1rem;
+    transform: translateY(-1rem);
+}
+/*-----------*/
+
+/**FOOTER STYLE**/
+.footer{
+    background-color: #274172;
+    color:white;
+    padding: 1%;
+}
+.footer-icon{
+    font-size: 2.5em;
+    color:white;
+    padding:1%; 
+}
+.footer-icon:hover{
+    color:#ffd700;
+}
+.footer-catchphrase{
+    color:#ffd700;
+}
+/** -------------- **/
+
+
+/** STARTUP ANIMATION **/
+/** ------------------- **/
+
+/** SIDEBAR **/
+#sidebar-nav {
+    width: 160px;
+}
+/** ------------- **/
